@@ -1,0 +1,31 @@
+<section>
+      <h1>CS Duolingo</h1>
+      <p id="description">Welcome to CS Duolingo!!! {{#unless loggedin}}
+            <a href='/signup'>Create an account</a>to start learning from one of our great courses!{{/unless}}
+      </p>
+      <hr />
+      <div>
+            {{#if error}}
+            <p class="errorhome"> {{etext}} </p>
+            {{/if}}
+            <h2 class="coursehome">Courses:</h2>
+            <aside>
+                  <a href="/discrete">
+                        <div class="courselinks">
+                              Discrete Structures
+                              {{#if loggedin}}
+                              <progress id="file" value="33" max="100">33%</progress>
+                              {{/if}}
+                        </div>
+                  </a>
+                  <a href="/hci">
+                        <div class="courselinks">
+                              Human-Computer Interaction
+                              {{#if loggedin}}
+                              <progress id="file" value="66" max="100">66%</progress>
+                              {{/if}}
+                        </div>
+                  </a>
+            </aside>
+      </div>
+</section>
